@@ -1,0 +1,73 @@
+.containerUl{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.img{
+    width: 100rem;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container button{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+    border: 0;
+    z-index: 1;
+}
+.container button:hover{
+    -webkit-box-shadow: 6px 8px 20px -4px rgba(0,0,0,0.37);
+    -moz-box-shadow: 6px 8px 20px -4px rgba(0,0,0,0.37);
+    box-shadow: 6px 8px 20px -4px rgba(0,0,0,0.37);
+    cursor: pointer;
+}
+
+.btn1{
+    transform: translateX(-105px);
+
+}
+.btn2{
+    transform: translateX(105px);
+}
+.incono1{
+    position:absolute;
+    bottom: 18px ;
+    left: 34px;
+}
+.incono2{
+    position:absolute;
+    left: 2px;
+    bottom: 19px;
+}
+.Containerpagination{
+    position: absolute;
+    list-style: none;
+    display:flex;
+    gap: 3px;
+    bottom: 2px;
+}
+.active{
+    background-color: white;
+    height: 8px;
+    width: 0.5rem;
+    border-radius: 50%;
+}
+
+.pagination{
+    background-color: gray;
+    border: solid 2px white;
+    height: 3px;
+    width: 0.2rem;
+    border-radius: 50%;
+}
+
+

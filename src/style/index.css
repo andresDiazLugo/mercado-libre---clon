@@ -1,0 +1,28 @@
+@import url('./normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@font-face{
+  font-family: proximanovaLigth;
+  src: url('../assets/fonts/proximanova-light.woff2');
+}
+@font-face {
+  font-family: proximanovaSeimbo;
+  src:url('../assets/fonts/proximanova-semibold.woff2');
+}
+@font-face {
+  font-family: proximanovaRegular;
+  src:url('../assets/fonts/proximanova-regular.woff2');
+}
+:root {
+  /* font-family: 'Reboto', Helvetica, Arial, sans-serif; */
+  --color-background-page: #ececec;
+  --color-navegation:  #fcf45c ;
+
+}
+
+body{
+  background-color:  var(--color-background-page);
+  font-family: proximanovaRegular;
+  margin: 0;
+  padding: 0;
+}
+

@@ -1,15 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-
+import Header from './components/Header/Header'
+import Carousel from './components/Carousel/Carousel'
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
-    <div className="App">
-        <h1>hello world</h1>
-        <h2>nueva rama</h2>
-    </div>
+    <>
+      <Header/>  
+      <Carousel/>
+    </>
   )
 }
 
