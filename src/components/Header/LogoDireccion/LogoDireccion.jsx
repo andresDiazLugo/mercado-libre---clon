@@ -1,5 +1,5 @@
 import React from 'react'
-import logoMercadoLibre from '../../assets/logo.png'
+import logoMercadoLibre from '../../../assets/logo.png'
 import {TfiLocationPin} from 'react-icons/tfi'
 import style from './LogoDireccion.module.css'
 export default function LogoDireccion() {

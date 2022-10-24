@@ -1,12 +1,10 @@
-import Header from './components/Header/Header'
-import Carousel from './components/Carousel/Carousel'
+import Inicio from "./components/paginaInincio.jsx/Inicio"
 function App() {
  
 
   return (
     <>
-      <Header/>  
-      <Carousel/>
+      <Inicio/>
     </>
   )
 }

@@ -1,0 +1,106 @@
+.container{
+    
+    width: 60%;
+    margin: 0 auto;
+    background-color: white;
+}
+.encabezado{
+    display: flex;
+    height: 5.4rem;
+    background: -webkit-gradient(linear,left top,right top,color-stop(55%,#a90f90),to(#0c1a51));
+    background: -webkit-linear-gradient(left,#a90f90 55%,#0c1a51);
+    background: linear-gradient(90deg,#a90f90 55%,#0c1a51);
+    justify-content: space-between;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    align-items: center;
+}
+.encabezado h2{
+    margin-left: 1rem;
+    color: white;
+    font-weight: 600;
+    line-height:30px;
+    font-size: 26px;
+   
+}
+.price{   
+    color: white;
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    /* background-color: red; */
+    height: 5rem;
+    line-height:0;
+    justify-content: center;
+    margin-right: 1rem;
+    padding-left: 1rem;
+    font-size: 15px;  
+
+}
+.priceXline{
+    text-decoration: line-through;
+    position: absolute;
+    top: 6px;
+}
+.price p span{
+    font-size: 21px;
+    font-weight: 600;
+}
+.price::before{
+    content: '';
+    width: 2px;
+    height: 41px;
+    background-color: white;
+    position: absolute;
+    left: 6px;
+    top: 14px;
+
+}
+.titleBeneficios{
+    font-size: 18px;
+    margin-left: 1.4rem;
+}
+.containerUl{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.containerUl li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 16px;
+}
+.containerUl li img{
+    height: 4.4rem;
+    border-radius: 50%;
+    margin-right:1rem ;
+    border: 1px solid rgba(209, 209, 209, 0.5);
+}
+.envios{
+    width: 16rem;
+    margin-right: 3rem;
+}
+.suscribite{
+    height: 4.9rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-top:  1px solid rgba(209, 209, 209, 0.5);
+}
+.suscribite button{
+    padding: 0.9rem;
+    width: 7.4rem;
+    margin-right: 1rem;
+    border-radius: 9px;
+    background-color: #3483fa;
+    border: 0px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+
