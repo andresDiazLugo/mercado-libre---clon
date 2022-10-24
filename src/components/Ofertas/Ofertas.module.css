@@ -1,0 +1,53 @@
+.containerSection{
+    width: 66%;
+    margin: 5rem auto;  
+}
+.containerSection h2 span{
+    font-size: 16px;
+    color:#3484FA 
+}
+
+.containerUl{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+.containerUl li{ 
+    color: #00A650;
+    background-color: white;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.16);
+    cursor: pointer;
+    height: fit-content;
+}
+.containerUl li h2{
+    font-size: 23px;
+    color: black;
+    font-weight: 500;
+}
+.containerUl li h2 span{
+    font-size: 14px;
+    font-weight: 500;
+    color: #00A650;
+
+}
+.containerUl li div{
+    width: 90%;
+    margin-left: 18px;
+    font-weight: 500;
+}
+.containerUl li img{
+    border-bottom: 1px solid rgba(209, 209, 209, 0.5);
+
+}
+.containerUl li div h3{
+    font-size: 0.9rem;
+}
+.price{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 1rem;
+    margin-top: 1rem ;
+}

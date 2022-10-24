@@ -1,0 +1,123 @@
+.containerSection{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 4rem auto; 
+}
+.container1 p{
+    font-size:24px;
+    font-family: proximanovaLigth;
+    color:rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+.container1 span{
+    font-size: 16px;
+    font-weight: 600;
+    color:#3484FA;
+    margin-left: 1rem;
+}
+.container2{
+    display: flex;
+    gap: 1rem;
+}
+.container2 .subcontainer1{
+    background-image: url("https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/disney/hub-widget-disney-star/Widget_Multicontent_Latam_768-x-566px.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 23rem;
+    height: 15rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: end;
+    color: white;
+    line-height: 25%;
+    gap: 1rem;
+}
+.container2 .subcontainer2{
+    background-image: url("https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbo/widget/HBOMax_widgetmulti_mobdsk_mla_@2x.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 23rem;
+    height: 15rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: end;
+    color: white;
+    line-height: 25%;
+    gap: 1rem;
+
+}
+.container2 .subcontainer3{
+    background-image: url("https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/widget-multip/paramount_widgetmulti_mobdsk_mla_@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 23rem;
+    height: 15rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: end;
+    color: white;
+    line-height: 25%;
+    gap: 1rem;
+
+}
+.subcontainer1 div,.subcontainer2 div, .subcontainer3 div{
+    margin-bottom: 1rem;
+}
+.container2 img{
+    width: 5rem;
+    border-radius: 8px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.container2 span{
+    font-size: 22px;
+    font-weight: 600;
+}
+.container3{
+    margin-top: 6rem;
+    height: 15rem;
+    display: flex;
+}
+.container3 .ImgPortion{
+    width: 50%;
+    background-image: url("https://http2.mlstatic.com/D_NQ_844168-MLA51443063649_092022-OO.jpg");
+    background-repeat: no-repeat;
+    background-size: 130%;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.ImgPortion img{
+    width: 6.8rem;
+    margin-left: 3rem;
+    border-radius: 5px;
+}
+.InfoPortion{
+    background-color: #8533AF;
+    width: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 10%;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+   
+}
+
+.InfoPortion p{
+    margin-left: 4rem;
+}
+.wordSpace{
+    letter-spacing: 4px;
+    font-weight: 500; 
+    font-size: 13px;   
+}
+.InfoPortion span{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+

@@ -1,8 +1,8 @@
 import React from 'react'
 import style from './Header.module.css'
-import LogoDireccion from '../LogoDireccion/LogoDireccion'
-import Search from '../SearchAndNav/Search'
-import SesionXsubscripcion from '../SesionAndSubscripciones/SesionXsubscripcion'
+import LogoDireccion from './LogoDireccion/LogoDireccion'
+import Search from './SearchAndNav/Search'
+import SesionXsubscripcion from './SesionAndSubscripciones/SesionXsubscripcion'
 
 
 export default function Header() {

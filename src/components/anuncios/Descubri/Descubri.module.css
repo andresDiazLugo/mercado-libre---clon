@@ -1,0 +1,62 @@
+.containerSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    width: 60%;
+    font-size: 24px;
+    font-weight: 300;
+    color: #666;
+    font-family: proximanovaLigth;
+}
+.containerInfo{
+    display: flex;
+    gap: 1rem;
+}
+.containerInfo .subcontainer{
+    display: flex;
+    align-items: center;
+    width: 35rem;
+    background-color: white;
+}
+.containerInfo .subcontainer:hover{
+    cursor: pointer;
+    -webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.29);
+-moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.29);
+box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.29);
+}
+.containerInfo .subcontainer .containerInfo1{
+    /* background-color: green; */
+    font-display: flex;
+    flex-direction: column;
+    align-items: start;
+    line-height: 100%;
+    font-size: 12px;
+    margin-left: 1.7rem;
+}
+.containerInfo1 .subTitle{
+    letter-spacing: 4px;
+    margin-bottom: 1.9rem;
+}
+.containerInfo1  p span{
+    font-size: 28px;
+    color: #4b4b4b;
+    font-weight: 600;
+}
+.containerInfo1 button{
+    padding: 0.5rem;
+    width: 5.7rem;
+    border-radius: 2px;
+    border: 0;
+    background-color: #3483fa;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.containerInfo .subcontainer img{
+    width: 16rem;
+    margin-left: 1rem;
+}

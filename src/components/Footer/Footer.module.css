@@ -1,0 +1,89 @@
+.btn{
+    background-color: white;
+    border-top: 1px solid  rgba(165, 161, 161, 0.55);
+    border-left: 1px solid  rgba(165, 161, 161, 0.55) ;
+    border-right: 1px solid  rgba(165, 161, 161, 0.55) ;
+    border-bottom: 0;
+    z-index: 1;
+    /* padding: 0.4rem; */
+    position: absolute;
+    right:55rem;
+    transform: translateY(-29px);
+    font-size: 14px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #333;
+    text-align: center;
+    width: 10rem;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+.btnActive{
+    background-color:#e6e6e6 ;
+    border-top: 1px solid  rgba(165, 161, 161, 0.55);
+    border-left: 1px solid  rgba(165, 161, 161, 0.55) ;
+    border-right: 1px solid  rgba(165, 161, 161, 0.55) ;
+    border-bottom: 0;
+    z-index: 1;
+    /* padding: 0.4rem; */
+    position: absolute;
+    right:55rem;
+    transform: translateY(-29px);
+    font-size: 14px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #333;
+    text-align: center;
+    width: 10rem;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;   
+    cursor: pointer;
+
+}
+/* .containerDiv{
+    transform: translateX(-5000px);
+} */
+.containerUl{
+    border-top: 1px solid rgba(165, 161, 161, 0.55);
+    background-color: #e6e6e6;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    color: #999;
+    transition: 1s ease-in-out;
+    margin: 0;
+    padding: 1rem;
+}
+.containerUl li{
+    display: flex;
+    flex-direction: column;
+}
+.containerUl li h4{
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+.containerInfo{
+    border-top: 1px solid rgba(165, 161, 161, 0.55);
+    background-color: white;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1;
+}
+
+.containerInfo a{
+    text-decoration: none;
+    font-size: 13px;
+    color: #333;
+}
