@@ -1,0 +1,22 @@
+export const courusel = [
+    {
+    id:1,
+    img:"https://http2.mlstatic.com/D_NQ_860664-MLA51953628457_102022-OO.webp",
+    },
+    {
+    id:2,
+    img:"https://http2.mlstatic.com/D_NQ_869470-MLA52027505683_102022-OO.webp",
+    },
+    {
+    id:3,
+    img:"https://http2.mlstatic.com/D_NQ_857711-MLA51954042645_102022-OO.webp",
+    },
+    {
+    id:4,
+    img:"https://http2.mlstatic.com/D_NQ_794119-MLA51903229645_102022-OO.webp",
+    },
+    {
+    id:5,
+    img:"https://http2.mlstatic.com/D_NQ_688331-MLA52045856162_102022-OO.webp",
+    }
+];

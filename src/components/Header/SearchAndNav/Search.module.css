@@ -1,0 +1,48 @@
+.container{
+    background-color:white;
+    padding-right: 12px;
+    -webkit-box-shadow: 1px 1px 6px -1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 1px 6px -1px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 6px -1px rgba(0,0,0,0.3);
+    height: 2.6rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius:1px ;
+
+}
+.input{
+    width: 36rem;
+    height: 1rem;
+    margin-left: 1rem;
+    border: white;
+   
+    font-family: proximanovaLigth;
+    color: #333;
+    color: #333;
+
+    padding: 6px;
+    outline: none;
+    border-right: 1.3px solid rgb(209, 206, 206);
+   
+}
+.incono{
+    cursor:pointer
+}
+.ul{
+    margin-top: 1.3rem;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-size: 15px;
+    color: rgba(0,0,0,.5);
+
+}
+.ul li a:hover{
+    cursor:pointer;
+    color:black;
+}
+.enlaceArrow{
+    position: relative;
+    margin-right: 10px;
+}

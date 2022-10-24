@@ -1,15 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-
+import Inicio from "./components/paginaInincio.jsx/Inicio"
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
-    <div className="App">
-        <h1>hello world</h1>
-        <h2>nueva rama</h2>
-    </div>
+    <>
+      <Inicio/>
+    </>
   )
 }
 

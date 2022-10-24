@@ -1,0 +1,14 @@
+.header{
+    background-color: var(--color-navegation);
+    width: 99vw;
+    height: 6.5rem;
+    display: flex;
+    justify-content: center;
+}
+.headerContainer{
+    width: 1260px;
+    padding-top: 10px;
+    display: flex;
+    gap: 3.5rem;
+    
+}
