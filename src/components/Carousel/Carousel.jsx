@@ -43,14 +43,16 @@ export default function Carousel() {
         },500)
     }
 
-    setInterval(()=>{
-        beforeCarousel()
-    },8000)
+   
     
     useEffect(()=>{
         const containerSlider=captureElementsDom()
         let containerSliderLast = containerSlider[containerSlider.length-1]
         refSlider.current.insertAdjacentElement("afterbegin",containerSliderLast)
+        const idInterval = setInterval(()=>{
+            beforeCarousel()
+        },8000)
+        return ()=> clearInterval(idInterval)
     },[])
     
     return (
