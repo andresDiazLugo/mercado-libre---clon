@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+}
+.subContainer{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68rem;
+    height: 12rem;
+    gap: 4rem;
+    margin-top:3rem;
+}
+.subContainer img {
+    height: 6rem;
+}
+.subContainer div h2{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.08;
+}
+.subContainerUl{
+    display: flex;
+    flex-direction: column;
+}
+
+.styleSpan{
+    color: rgba(0,0,0,.9);
+    font-weight: 600;
+    line-height: 1.231;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+.navega{
+    color: #3483fa;
+}
