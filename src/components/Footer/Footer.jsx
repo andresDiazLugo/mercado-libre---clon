@@ -7,7 +7,7 @@ import {MdOutlineKeyboardArrowDown} from 'react-icons/md'
 export default function Footer() {
   const [ButtonActivate, setButton] = useState(false)
     return (
-    <footer>
+    <footer className={style.footer}>
         <button className={!ButtonActivate ? style.btn : style.btnActive} onClick={()=>setButton(!ButtonActivate)}>Más informacion {!ButtonActivate ? <MdOutlineKeyboardArrowUp size="16px"/>: <MdOutlineKeyboardArrowDown size="16px"/>}</button>
         {ButtonActivate && <div className={style.containerDiv}>
             <ul className={style.containerUl}>

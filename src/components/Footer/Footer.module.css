@@ -1,3 +1,8 @@
+.footer{
+    bottom:0;
+    width: 100%;
+    margin: 0;
+}
 .btn{
     background-color: white;
     border-top: 1px solid  rgba(165, 161, 161, 0.55);
