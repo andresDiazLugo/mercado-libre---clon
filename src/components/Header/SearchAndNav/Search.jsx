@@ -1,14 +1,27 @@
-import React from 'react';
+import {useRef,useState} from 'react';
 import style from './Search.module.css';
 import {IoIosSearch} from 'react-icons/io'
 import {MdOutlineKeyboardArrowDown} from 'react-icons/md'
+import { BsMenuUp } from 'react-icons/bs';
+import {useNavigate} from 'react-router-dom'
+
 export default function Search() {
+    const inputRef= useRef();
+    const navigate = useNavigate();
+    const SendValueInput =(e)=>{
+      e.preventDefault()
+      const valueInputInSeacrch = inputRef.current.value;
+      navigate("/allProducts/"+valueInputInSeacrch);
+      inputRef.current.value = "";
+    } 
   return (
     <div >
-        <div className={style.container}>
-            <input className={style.input}  type="text" placeholder="Buscar productos, marcas y más..."/>
-            <IoIosSearch className={style.incono} size="1.3rem" color='#333'/>
-        </div>
+        <form onSubmit={SendValueInput} className={style.container}>
+            <input ref={inputRef} className={style.input}  type="text" placeholder="Buscar productos, marcas y más..."/>
+          
+               <IoIosSearch onClick={SendValueInput} className={style.incono} size="1.3rem" color='#333'/>
+            
+        </form>
                 <ul className={style.ul}>
                     <li ><a className={style.enlaceArrow}>Categorías <MdOutlineKeyboardArrowDown style={{position:"absolute",bottom:"1"}}/></a></li>
                     <li><a>Ofertas</a></li>
