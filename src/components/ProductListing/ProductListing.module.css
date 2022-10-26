@@ -1,0 +1,56 @@
+.container{
+    min-height: 100vh;
+    width:55rem;
+    margin:auto;
+    margin-bottom: 10rem;
+}
+.container ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+} 
+.containerLi{
+    background-color: white;
+    display: flex;
+    list-style: none;
+    justify-content: start;
+    gap: 2rem;
+    align-items: center;
+    padding: 1rem;
+}
+.containerLi img{
+    width: 10rem;
+    height: 10rem;
+    margin-left: 2rem;
+    object-fit: cover;
+
+}
+.containerLi div{
+}
+.containerLi div h4{
+    color: #333;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.3;
+    margin: 0;
+}
+.price{
+    color: #333;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 10px 0;
+}
+.envio{
+    flex-shrink: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    margin-right: 10px;
+    color: #00a650;
+    margin: 0;
+}
+.condition{
+    color: #666;
+    font-size: 14px;
+}

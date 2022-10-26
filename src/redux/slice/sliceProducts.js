@@ -2,7 +2,8 @@ import {createSlice} from '@reduxjs/toolkit'
 import {getApi} from '../../services/GET'
 
 const initialState={
-    allProducts:[]
+    allProducts:[],
+    msgError : false
 }
 
  const productSlice = createSlice(
@@ -21,16 +22,24 @@ const initialState={
                         condition:e.condition
                     }
                 })
+            },
+            msgError:(state,action)=>{
+                state.msgError = action.payload
             }
         }
     }
 )
 
-export const {getAllProducts} = productSlice.actions
+export const {getAllProducts,msgError} = productSlice.actions
 
 export const getAllProductsApiMercadoLibre = (name)=>{
     return async dispatch =>{
         const response = await getApi("https://api.mercadolibre.com/sites/MLA/search?q="+name)
+        if(!response.results.length){
+               dispatch(msgError(true))
+        }else{
+            dispatch(msgError(false))
+        }
         dispatch(getAllProducts(response.results))
     }
 }

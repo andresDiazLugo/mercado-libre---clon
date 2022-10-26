@@ -1,7 +1,7 @@
 .containerMain{
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: white; 
     align-items: center;
     margin-top: 4rem;
 }
