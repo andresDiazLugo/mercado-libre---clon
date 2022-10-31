@@ -1,0 +1,67 @@
+
+.containerSection{
+    display: flex;
+    margin: 0 auto;
+    background-color:white;
+    width: 200%;
+    height: fit-content;
+
+}
+.subContainer{
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.subContainer div{
+    border: 1px solid rgb(165, 159, 159);
+    border-radius: 4px;
+    margin-bottom: 5px;
+    width: 2.3rem;
+    padding: 4px;
+    height: fit-content;
+    height: 2.9rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    gap: 1rem;
+    background-color: white;
+    position: relative;
+}
+.containerleftoverImages{
+    position:absolute;
+    background-color: hsla(0,0%,100%,.6) ;
+    width: 100%;
+    height: 100%;
+    top: 0px
+}
+.leftoverImages{
+    position: absolute;
+    top:0px;
+    z-index: 10;
+}
+.leftoverImages span{
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #3483fa
+}
+.img{
+    width: 100%; 
+    height:100% ; 
+    object-fit: cover;
+
+}
+.containerImg{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    object-fit: cover;
+    position: relative;
+    width: 80%;
+    height: fit-content;
+    margin:3rem;
+}
+.imgMain{
+    object-fit: cover;
+}
+

@@ -1,0 +1,160 @@
+.containerSection{
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+}
+.subContainer{
+    border: 1px solid #a5a3a38c;
+
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 1rem;
+}
+.condition{
+    font-size: 14px;
+    color: #0000008C;
+    /* margin:0px 0px -10px 0; */
+    
+}
+.title{
+    padding: 0;
+    font-size: 19px;
+    color: #000000E6;
+    display: flex;
+    align-items: start;
+    height: fit-content;
+    position: relative;
+}
+.title  h3{
+    margin: 0;
+}
+/* .title .Heart{
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+
+} */
+.subContainerStar{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    /* margin-bottom: -1rem; */
+    /* margin-top: -1rem; */
+
+}
+.subContainer .total{
+    color:#3483fa ;
+    font-weight: 600;
+    font-size: 0.9rem;
+    
+}
+.price{
+    margin-bottom: 10px;
+    line-height: 2%;
+}
+.price p{
+    font-size: 34px;
+    color: #000000E6;
+}
+.price a{
+    text-decoration: none;
+    color: #3483fa;   
+    font-size: 14px;
+}
+.shipping div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.shipping div p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #00a650;
+}
+.shipping a{
+    text-decoration: none;
+    color: #3483fa;   
+    font-size: 14px;
+}
+.devolution{
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+.devolution div{
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px;
+}
+.devolution div p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #00a650;
+}
+.devolution p{
+    font-size: 14px;
+    color:#0000008C;
+    margin-bottom: 1rem;
+}
+.devolution a{
+    text-decoration: none;
+    color: #3483fa;   
+    font-size: 14px;
+}
+.operationCompras .stock{
+    font-size: 16px;
+    color: #000000E6;
+    font-weight: 600;
+}
+.operationCompras .cantidad{
+    font-size: 16px;
+    color: #000000E6;
+}
+.operationCompras .cantidad .unidad{
+    font-weight: 600;
+}
+.operationCompras .disponibles{
+    font-size: 15px;
+    color:#0000008C;
+    margin-bottom: 3rem;
+}
+.operationCompras div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.operationCompras div button{
+    height:3rem;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.comprar{
+    background-color: #3483fa;
+    border: none;
+    color: white;
+}
+.agregar{
+    background-color: rgba(65,137,230,.15);
+    border: none;
+    color: #3483fa;
+    margin-bottom: 1rem;
+}
+.infoCompras div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.infoCompras div p{
+    font-size: 14px;
+    color: #0000008C;
+}
+.infoCompras div p span{
+    color: #3483fa;
+    font-weight: 500;
+}

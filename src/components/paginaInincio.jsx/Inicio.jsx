@@ -7,7 +7,6 @@ import Anuncios from '../anuncios/Anuncios'
 import Descubri from '../anuncios/Descubri/Descubri'
 import Info from '../Footer/Info/Info'
 import Footer from '../Footer/Footer'
-import Counter from '../counter'
 export default function Inicio() {
   return (
     <>
