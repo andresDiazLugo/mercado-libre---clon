@@ -60,7 +60,7 @@ export default function Carousel() {
         <div ref={refSlider} className={style.slider} id="slider">
            
             {courusel.map(img=>{
-            return  <div  className="sliderSection">
+            return  <div key={img.id} className="sliderSection">
                          <img className={style.sliderImg}src={img.img}/>
                     </div>
             })}

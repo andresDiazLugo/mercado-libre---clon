@@ -8,7 +8,7 @@ export default function Mensajes() {
             <div>
                 <h2>No hay publicaciones que coincidan con tu búsqueda.</h2>
                 <ul className={style.subContainerUl}>
-                    <li><span className={style.styleSpan}>Revisá la ortografía </span>Revisá la ortografía de la palabra</li>
+                    <li><span className={style.styleSpan}>Revisá la ortografía </span> de la palabra</li>
                     <li>Utlizá <span className={style.styleSpan}>palabras más genéricas</span> o menos palabras</li>
                     <li><span className={style.navega}>Navegá por las categorías</span>  para encontrar un producto simular</li>
                 </ul>

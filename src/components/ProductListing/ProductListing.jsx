@@ -1,15 +1,18 @@
 import {useEffect} from 'react'
-import {useParams}from'react-router-dom'
+import {useParams,useNavigate}from'react-router-dom'
 import {useSelector,useDispatch} from 'react-redux'
 import {getAllProductsApiMercadoLibre} from '../../redux/slice/sliceProducts'
 import style from './ProductListing.module.css'
 import {convertARS}from './convertARS'
+import {getDetailProduct} from '../../redux/slice/sliceProducts'
 import Mensajes from '../Mensajes/Mensajes'
+import {deleteSymbolSlash} from '../../services/DeleteSymbolSlash'
 export default function ProductListing() {
     const dispatch = useDispatch();
     const allProducts = useSelector(state=>state.products.allProducts)
     const msgError = useSelector(state => state.products.msgError)
     const {name} = useParams()
+    const navigate = useNavigate()
     useEffect(()=>{
         dispatch(getAllProductsApiMercadoLibre(name))
     },[name])
@@ -19,22 +22,31 @@ export default function ProductListing() {
         <Mensajes/>
       )
     }
-    
+    const goPathDetail = (e,idProduct,idUser,idCatalog)=>{
+      e.preventDefault()
+      // dispatch(getDetailProduct(idProduct))
+      // setTimeout(()=>{
+        navigate(`/allProducts/${name}/detailProducts/${idProduct}/${idUser}/${idCatalog}`)
+
+      // },2000)
+    }
   return (
    <div className={style.container}>
         <ul>
-            {allProducts?.map(e=>{
-                return<li className={style.containerLi} key={e.id}>
-                        <img src={e.img}/>
-                        <div >
-                            <h4>{e.title}</h4>
-                            <p className={style.price}>{"$ " + convertARS(e.price)}</p>
-                            {e.shipping && <p className={style.envio}>Envío gratis</p>}
-                            <p className={style.condition}>{e.condition === "new" ? "Nuevo": "Usado"}</p>
-                        </div>
-                      </li>
+            {allProducts?.map(element=>{
+                       return <li key={element.id}  className={style.containerLi} onClick={(e)=>goPathDetail(e,element.id,element.idUser,element.catalogProduct)}>
+                                    <img src={element.img}/>
+                                    <div >
+                                        <h4>{element.title}</h4>
+                                        <p className={style.price}>{"$ " + convertARS(element.price)}</p>
+                                        {element.shipping && <p className={style.envio}>Envío gratis</p>}
+                                        <p className={style.condition}>{element.condition === "new" ? "Nuevo": "Usado"}</p>
+                                    </div>
+                               </li>
+                          
             })}
         </ul>
-  </div>
+     </div>
   )
 }
+// to={`/allProducts/${name}/detailProducts/${deleteSymbolSlash(e.title)}/${e.id}/${e.idUser}

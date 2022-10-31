@@ -1,3 +1,6 @@
+.link{
+    text-decoration: none;
+}
 .container{
     min-height: 100vh;
     width:55rem;
@@ -17,6 +20,7 @@
     gap: 2rem;
     align-items: center;
     padding: 1rem;
+    cursor: pointer;
 }
 .containerLi img{
     width: 10rem;
