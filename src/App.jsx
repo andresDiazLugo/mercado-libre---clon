@@ -2,6 +2,7 @@ import Inicio from "./components/paginaInincio.jsx/Inicio"
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
 import ProductListing from "./components/ProductListing/ProductListing"
+import DetailProduct from "./components/DetailProducts/DetailProduct"
 import {Route,Routes} from "react-router-dom"
 function App() {
  
@@ -18,6 +19,11 @@ function App() {
           path="/allProducts/:name"
           element={<ProductListing/>}
         />
+        <Route
+          path="/allProducts/:name/detailProducts/:id/:idUser/:idCatalog"
+          element={<DetailProduct/>}
+        />
+
       </Routes>
     <Footer/>
     </div>
