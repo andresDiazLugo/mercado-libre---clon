@@ -16,9 +16,9 @@ export default function ProductListing() {
     const navigate = useNavigate()
     useEffect(()=>{
         dispatch(getAllProductsApiMercadoLibre(name))
-        // return()=>{
-        //     dispatch(deletAll())
-        // }
+        return()=>{
+            dispatch(deletAll())
+        }
     },[name])
 
     if(msgError){
