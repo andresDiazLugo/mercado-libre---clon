@@ -26,7 +26,7 @@ useEffect(()=>{
             <p>Información sobre el vendedor</p>
         </div>
         <div className={style.containerUbicacion}>
-                <CiLocationOn size="1.5rem"/>
+                {/* <CiLocationOn size="1.5rem"/> */}
                    <div>
                         <p>Ubicación</p>
                         {users.address && <p><span>{users.address.city}</span></p>}

@@ -43,8 +43,8 @@ export default function DetailQuestionAndResponse() {
             <p className={style.subtitle}>Últimas realizadas</p>
         </div>
         {question.length>0 && <ul className={style.suContainerUl}>
-            {question.map(e=>{  
-                return <li>
+            {question.map((e,i)=>{  
+                return <li key={i}>
                          <p className={style.question}><FaQuestion color='#3483fa'/> {e.question}</p>
                          <div className={style.response}>
                             <p><span>{e.response}  </span>  {e.date.split("T")[0]}</p>

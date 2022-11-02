@@ -7,7 +7,7 @@ export default function DetailDescription() {
     <>
     {productDetail.description && 
     <div className={style.container}>
-         <div>
+         <div className={style.div}>
             <p className={style.title}>Descripción</p>
         </div>
      
