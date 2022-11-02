@@ -1,0 +1,53 @@
+.container{
+    height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    position: relative;
+}
+.img1{
+    animation-name:image;
+    animation-duration: 0.4s;
+    position: relative;
+    animation-direction: reverse;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+.img2{
+    animation-name:image2;
+    animation-duration: 0.4s;
+    position: relative;
+    animation-direction: reverse;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+/* .container img{
+    animation-name:image;
+    animation-duration: 4s;
+    position: relative;
+    animation-direction: reverse;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+} */
+@keyframes image{
+    0% {right: 0; top:0px}
+    25% { right:300px; bottom:0px }
+    50% {  right: 300px; bottom: 200px; }
+    75% {  right: 0px; bottom: 200px; }
+    100% {  right: 0px; bottom: 0px; transform: rotate(-360deg);
+        background-color:#fcf45c;
+        padding: 1rem; }
+}
+@keyframes image2{
+    0% {left: 0; top:0px;}
+    25% { left:300px; bottom:0px;}
+    50% {  left: 300px; bottom: 200px; }
+    75% {  left: 0px; bottom: 200px; }
+    100% {  left: 0px; bottom: 0px; transform: rotate(360deg);
+    background-color:#fcf45c;
+    padding: 1rem;
+   ;
+    }
+}

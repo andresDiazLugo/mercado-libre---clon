@@ -69,12 +69,18 @@ const initialState={
                     ...state.question,
                     action.payload,
                 ]
+            },
+            deletAll: (state)=>{
+                state.allProducts= [],
+                state.productDetail={},
+                state.question=[],
+                state.review={}
             }
         }
     }
 )
 
- const {getAllProducts,msgError,detailProduct,review,question,description,listProperty,createQuestions} = productSlice.actions
+export const {getAllProducts,msgError,detailProduct,review,question,description,listProperty,createQuestions,deletAll} = productSlice.actions
 
 export const getAllProductsApiMercadoLibre = (name)=>{
     return async dispatch =>{
