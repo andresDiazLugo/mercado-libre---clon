@@ -6,16 +6,7 @@
     width: 100%;
     height: fit-content;
 }
-.containerSection::before{
-    content: "";
-    width: 40%;
-    height: 1px;
-    background-color: #8181818e;
-    position: absolute;
-    top:46rem;
-    left: 23rem;
 
-}
 .subContainer{
     margin-left: 1rem;
     margin-top: 1rem;
