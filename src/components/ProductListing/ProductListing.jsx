@@ -19,7 +19,7 @@ export default function ProductListing() {
         return()=>{
             dispatch(deletAll())
         }
-    },[name])
+    },[])
 
     if(msgError){
       return(
