@@ -3,8 +3,17 @@
     display: flex;
     margin: 0 auto;
     background-color:white;
-    width: 200%;
+    width: 100%;
     height: fit-content;
+}
+.containerSection::before{
+    content: "";
+    width: 40%;
+    height: 1px;
+    background-color: #8181818e;
+    position: absolute;
+    top:46rem;
+    left: 23rem;
 
 }
 .subContainer{
@@ -27,6 +36,10 @@
     background-color: white;
     position: relative;
 }
+.subContainer .active{
+    border: 3px solid #3483fa ;
+}
+
 .containerleftoverImages{
     position:absolute;
     background-color: hsla(0,0%,100%,.6) ;
@@ -59,7 +72,7 @@
     position: relative;
     width: 80%;
     height: fit-content;
-    margin:3rem;
+    margin:5rem auto;
 }
 .imgMain{
     object-fit: cover;

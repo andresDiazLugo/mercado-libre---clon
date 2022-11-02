@@ -1,28 +1,31 @@
 import {useEffect} from 'react'
-import DetailImgProduct from './DetailImgProduct/DetailImgProduct'
-import {getDetailProduct,getReview,getQuestion,getDescription,getCatalogDetailSpecificProduct} from '../../redux/slice/sliceProducts'
+import Detail from './Detail/Detail'
+import {getDetailProduct,getReview,getQuestion,getCatalogDetailSpecificProduct} from '../../redux/slice/sliceProducts'
 import {getUser} from '../../redux/slice/sliceDetailUsers'
 import {useParams}from'react-router-dom'
-import {useDispatch} from 'react-redux'
-import CardComprar from './CardInfoProduct/CardComprar'
+import {useDispatch,useSelector} from 'react-redux'
+import CardMain from './CardInfoProduct/CardMain'
 import style from './DetailProduct.module.css'
 export default function DetailProduct() {
   const {id,idUser,idCatalog} = useParams()
+  const productDetail = useSelector(state => state.products.productDetail)
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(getDetailProduct(id))
     dispatch(getUser(idUser))
     dispatch(getReview(id))
     dispatch(getQuestion(id))
-    dispatch(getDescription(id))
+    window.scroll({
+      top:0
+    })
     if(idCatalog !== null){
       dispatch(getCatalogDetailSpecificProduct(idCatalog))
     }
   },[])
   return (
     <div className={style.container}>
-        <DetailImgProduct />
-        <CardComprar/>
+        <Detail/>
+        <CardMain/>
     </div>
   )
 }
