@@ -1,0 +1,95 @@
+.container{
+    border: 1px solid #a5a3a38c;
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 1rem;
+}
+.title{
+    font-size: 18px;
+    color:#000000E6;
+    margin: 0px 0px 28px;
+}
+.containerUbicacion{
+    display: flex;
+    gap: 10px;
+    align-items: start;
+    margin-bottom: 2rem;
+}
+.containerUbicacion div p{
+    margin: 0;
+    line-height: 130%;
+    font-size: 16px;
+    color: #000000E6;
+}
+.containerUbicacion div p span{
+    font-size: 14px;
+    color: #0000008C;
+}
+.level{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+.level div p {
+    margin: 0;
+    line-height: 130%;
+    color: #00a650;
+}
+.level div .p{
+    color: rgba(0,0,0,.55);
+    font-size: 14px;
+}
+.conatinerLevels{
+    display: flex;
+    gap :10px;
+    margin-bottom: 4rem;
+}
+.levelsRanking{
+    width: 3.7rem;
+    height: 10px;
+    background-color:#EEEEEE;
+}
+.ventas{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.ventas div{
+    text-align: center;
+    line-height: 66%;
+}
+.ventas div img{
+    height: 1.5rem;
+}
+.ventas div p {
+    font-size: 12px;
+    color: #000000E6;
+}
+.ventas div span{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.ventas::after{
+    content: "";
+    width:1px;
+    position: absolute;
+    height: 4rem;
+    background-color: #0000008C;
+    right: 126px;
+}
+.ventas::before{
+    content: "";
+    width:1px;
+    height: 4rem;
+    position: absolute;
+    left:110px;
+    background-color:#0000008C ;
+}
+.link a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #3483fa;
+}

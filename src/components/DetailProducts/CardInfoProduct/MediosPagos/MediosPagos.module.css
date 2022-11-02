@@ -1,0 +1,39 @@
+.container{
+    border: 1px solid #a5a3a38c;
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 1rem;
+}
+.subcontainerTitle{
+    color: rgba(0,0,0,.9);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 28px;
+    width: 100%;
+}
+.subcontainerSinTarjeta{
+    color: rgba(0,0,0,.9);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 12px;
+}
+.subcontainerTarjetaCredito span{
+    color: rgba(0,0,0,.55);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 8px;
+}
+.subContainerImgTarjetas{
+    display: flex;
+    gap :1.8rem;
+}
+.link{
+    margin-top: 2rem;
+}
+.link a{
+    color: #2968c8;
+    font-size: 14px;
+    text-decoration: none;
+
+}
