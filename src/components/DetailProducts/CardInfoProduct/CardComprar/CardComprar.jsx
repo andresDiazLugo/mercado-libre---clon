@@ -6,13 +6,13 @@ import {AiOutlineHeart} from 'react-icons/ai'
 import {MdLocalShipping} from 'react-icons/md'
 import {TbArrowBack} from 'react-icons/tb'
 import {useSelector} from 'react-redux'
-import StartsVotation from '../StarsVotation/StartsVotation'
+import StartsVotation from '../../StarsVotation/StartsVotation'
+import {convertARS} from '../../../../components/ProductListing/convertARS'
 import style from './CardComprar.module.css'
 export default function CardComprar() {
     const productDetail = useSelector(state => state.products.productDetail)
     const review = useSelector(state => state.products.review)
     return (
-    <section className={style.containerSection}>
     <div className={style.subContainer}>
             <p className={style.condition}>{productDetail.condition === "new" && "Nuevo"}</p>
         <div className={style.title}>
@@ -24,7 +24,7 @@ export default function CardComprar() {
            <p className={style.total}>({review.paging?.total})</p>
         </div>: null}
         <div className={style.price}>
-            <p>${productDetail.price}</p>
+            <p>${convertARS(productDetail.price)}</p>
             <a href='#'>Ver los medios de pagos</a>
         </div>
        { productDetail.shipments &&<div className={style.shipping}>
@@ -66,6 +66,5 @@ export default function CardComprar() {
             </div>
         </div>
     </div>
-    </section>
   )
 }

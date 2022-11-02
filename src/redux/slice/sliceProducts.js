@@ -1,15 +1,12 @@
 import {createSlice} from '@reduxjs/toolkit'
 import {getApi} from '../../services/GET'
 
-
-
-
 const initialState={
     allProducts:[],
     msgError : false,
     productDetail:{},
     review:{},
-    question:{}
+    question:[]
 }
 
  const productSlice = createSlice(
@@ -36,17 +33,17 @@ const initialState={
             },
             detailProduct:(state,action)=>{
                 state.productDetail = {
-                    img: action.payload.pictures.map(e=>({url:e.url})),
-                    imgMain:action.payload.pictures[0].url || action.payload.thumbnail,
-                    title:action.payload.title,
-                    condition:action.payload.condition,
+                    img: action.payload.response.pictures.map(e=>({url:e.url})),
+                    imgMain:action.payload.response.pictures[0].url || action.payload.thumbnail,
+                    title:action.payload.response.title,
+                    condition:action.payload.response.condition,
                     nameProperty:null,
-                    price:action.payload.price,
-                    quantity:action.payload.available_quantity,
+                    price:action.payload.response.price,
+                    quantity:action.payload.response.available_quantity,
                     listPropertyProduct:null,
-                    property:action.payload.attributes.map(e=>({name:e.name,value:e.value_name})),
-                    description:null,
-                    shipments: action.payload.shipping.free_shipping             
+                    property:action.payload.response.attributes.map(e=>({name:e.name,value:e.value_name})),
+                    shipments: action.payload.response.shipping.free_shipping,
+                    description:action.payload.plain_text            
                 }
             },
                 listProperty:(state,action)=>{
@@ -59,19 +56,25 @@ const initialState={
                 state.review= action.payload
             },
             question:(state,action)=>{
-                state.question= action.payload
+                state.question= action.payload.map(e=>{
+                    return{
+                        question:e.text,
+                        response:!e.answer ? "" :e.answer.text,
+                        date:!e.answer ? "" :e.answer.date_created,
+                    }
+                })
             },
-            description:(state,action)=>{
-                state.productDetail={
-                    ...state.productDetail,
-                    description:action.payload
-                }
+            createQuestions:(state,action)=>{
+                state.question=[
+                    ...state.question,
+                    action.payload,
+                ]
             }
         }
     }
 )
 
- const {getAllProducts,msgError,detailProduct,review,question,description,listProperty} = productSlice.actions
+ const {getAllProducts,msgError,detailProduct,review,question,description,listProperty,createQuestions} = productSlice.actions
 
 export const getAllProductsApiMercadoLibre = (name)=>{
     return async dispatch =>{
@@ -88,23 +91,24 @@ export const getAllProductsApiMercadoLibre = (name)=>{
 export const getDetailProduct = (id)=>{
     return async dispatch=>{
         const response = await getApi(`/items/${id}`)
-        dispatch(detailProduct(response))
+        const {plain_text} = await getApi(`/items/${id}/description`)
+        dispatch(detailProduct({plain_text,response}))
     }
 }
 
 export const getCatalogDetailSpecificProduct = (idCatalog)=>{
    return async dispatch=>{
     const {main_features} = await getApi(`/products/${idCatalog}`)
-    console.log(main_features)
     dispatch(listProperty(main_features))
    }
 } 
-export const getDescription = (id)=>{
-    return async dispatch=>{
-        const {plain_text} = await getApi(`/items/${id}/description`)
-        dispatch(description(plain_text))
-    }
-} 
+// export const getDescription = (id)=>{
+//     return async dispatch=>{
+//         const {plain_text} = await getApi(`/items/${id}/description`)
+//         console.log(plain_text)
+//         dispatch(description(plain_text))
+//     }
+// } 
 export const getReview = (id)=>{
     return async dispatch =>{
         const response = await getApi(`/reviews/item/${id}`)
@@ -114,8 +118,15 @@ export const getReview = (id)=>{
 
 export const getQuestion = (id)=>{
     return async dispatch =>{
-        const response = await getApi(`/questions/search?item=${id}`)
-        dispatch(question(response))
+        
+        const {questions} = await getApi(`/questions/search?item=${id}`)
+        dispatch(question(questions))
+    }
+}
+
+export const createQuestion = (question)=>{
+    return dispatch =>{
+            dispatch(createQuestions(question))
     }
 }
 

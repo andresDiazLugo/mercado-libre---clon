@@ -30,12 +30,10 @@ export default function StartsVotation({size}) {
         arrayRenderUnfilled.push(j)
         j++
     }
-    console.log(arrayRenderUnfilled)
-  
     return (
     <div>
-        {arrayRenderStar.map(e=><RiStarSFill size={size} color="#3483fa"/>)}
-        {arrayRenderUnfilled.map(e=><RiStarSLine size={size} color="#3483fa"/>)}
+        {arrayRenderStar.map((e,i)=><RiStarSFill key={i} size={size} color="#3483fa"/>)}
+        {arrayRenderUnfilled.map((e,i)=><RiStarSLine key={i} size={size} color="#3483fa"/>)}
     </div>
   )
 }
