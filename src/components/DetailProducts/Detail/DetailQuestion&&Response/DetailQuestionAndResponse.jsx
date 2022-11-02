@@ -2,6 +2,7 @@ import {useState, useRef} from 'react'
 import style from './DetailQuestionAndResponse.module.css'
 import { useSelector,useDispatch } from 'react-redux'
 import {createQuestion} from '../../../../redux/slice/sliceProducts'
+import {FaQuestion} from 'react-icons/fa'
 
 export default function DetailQuestionAndResponse() {
     const tiempoTranscurrido = Date.now();
@@ -41,16 +42,16 @@ export default function DetailQuestionAndResponse() {
         <div>
             <p className={style.subtitle}>Últimas realizadas</p>
         </div>
-        <ul className={style.suContainerUl}>
+        {question.length>0 && <ul className={style.suContainerUl}>
             {question.map(e=>{  
                 return <li>
-                         <p className={style.question}>{e.question}</p>
+                         <p className={style.question}><FaQuestion color='#3483fa'/> {e.question}</p>
                          <div className={style.response}>
-                            <p><span>{e.response} {e.date.split("T")[0]}</span> </p>
+                            <p><span>{e.response}  </span>  {e.date.split("T")[0]}</p>
                          </div>
                        </li>
             })}
-        </ul>
+        </ul>}
     </div>
   )
 }
