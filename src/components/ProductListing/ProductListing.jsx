@@ -28,11 +28,11 @@ export default function ProductListing() {
       )
     }
     const goPathDetail = (e,idProduct,idUser,idCatalog)=>{
-      e.preventDefault()
+//       e.preventDefault()
       // dispatch(getDetailProduct(idProduct))
       // setTimeout(()=>{
-        navigate(`/allProducts/${name}/detailProducts/${idProduct}/${idUser}/${idCatalog}`)
-
+//         navigate(`/allProducts/${name}/detailProducts/${idProduct}/${idUser}/${idCatalog}`)
+alert("holaaa")
       // },2000)
     }
     if(allProducts.length=== 0){
