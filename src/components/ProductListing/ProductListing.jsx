@@ -16,11 +16,12 @@ export default function ProductListing() {
     const navigate = useNavigate()
     useEffect(()=>{
         dispatch(getAllProductsApiMercadoLibre(name))
+
         return()=>{
             dispatch(deletAll())
         }
     },[])
-
+    
     if(msgError){
       return(
         <Mensajes/>
