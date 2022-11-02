@@ -4,9 +4,10 @@ import {useSelector,useDispatch} from 'react-redux'
 import {getAllProductsApiMercadoLibre} from '../../redux/slice/sliceProducts'
 import style from './ProductListing.module.css'
 import {convertARS}from './convertARS'
-import {getDetailProduct} from '../../redux/slice/sliceProducts'
+import {getDetailProduct,deletAll} from '../../redux/slice/sliceProducts'
 import Mensajes from '../Mensajes/Mensajes'
 import {deleteSymbolSlash} from '../../services/DeleteSymbolSlash'
+import Loading from '../Loading/Loading'
 export default function ProductListing() {
     const dispatch = useDispatch();
     const allProducts = useSelector(state=>state.products.allProducts)
@@ -15,6 +16,9 @@ export default function ProductListing() {
     const navigate = useNavigate()
     useEffect(()=>{
         dispatch(getAllProductsApiMercadoLibre(name))
+        return()=>{
+            dispatch(deletAll())
+        }
     },[name])
 
     if(msgError){
@@ -29,6 +33,11 @@ export default function ProductListing() {
         navigate(`/allProducts/${name}/detailProducts/${idProduct}/${idUser}/${idCatalog}`)
 
       // },2000)
+    }
+    if(allProducts.length=== 0){
+      return <div>
+                <Loading/>
+            </div>
     }
   return (
    <div className={style.container}>

@@ -6,6 +6,7 @@ import {useParams}from'react-router-dom'
 import {useDispatch,useSelector} from 'react-redux'
 import CardMain from './CardInfoProduct/CardMain'
 import style from './DetailProduct.module.css'
+import Loading from '../Loading/Loading'
 export default function DetailProduct() {
   const {id,idUser,idCatalog} = useParams()
   const productDetail = useSelector(state => state.products.productDetail)
@@ -22,6 +23,13 @@ export default function DetailProduct() {
       dispatch(getCatalogDetailSpecificProduct(idCatalog))
     }
   },[])
+
+  if(!productDetail.img || !productDetail.title){
+    return <div>
+              <Loading/>
+           </div>
+  }
+
   return (
     <div className={style.container}>
         <Detail/>
