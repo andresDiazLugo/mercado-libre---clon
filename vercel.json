@@ -1,4 +1,14 @@
 {
-    "cleanUrls": true,
-    "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
+    "routes": [
+        {
+          "src": "/[^.]+",
+          "dest": "/"
+        }
+      ],
+    "rewrites": [
+        {
+          "source": "/((?!api/.).)",
+          "destination": "/index.html"
+        }
+      ]
 }
