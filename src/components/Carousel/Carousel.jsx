@@ -11,10 +11,8 @@ import style from './Carousel.module.css'
 export default function Carousel() {
     const [positionCarousel, setPosition] = useState(1);
     const refSlider = useRef()
-    
-    
-    const nextCarousel = ()=>{
 
+    const nextCarousel = ()=>{
         let sliderSectionFirst = captureElementsDom()[0];
         refSlider.current.style.marginLeft="-200%"
         refSlider.current.style.transition ="all 0.5s"
@@ -23,7 +21,7 @@ export default function Carousel() {
             setPosition(1)
         }
         setTimeout(()=>{
-        // refSlider.current.style.transition ="none";
+        refSlider.current.style.transition ="none";
         refSlider.current.insertAdjacentElement("beforeend",sliderSectionFirst);
         refSlider.current.style.marginLeft="-100%" 
         },500)
@@ -37,7 +35,7 @@ export default function Carousel() {
             setPosition(1)
         }
         setTimeout(()=>{
-        // refSlider.current.style.transition ="none";
+        refSlider.current.style.transition ="none";
         refSlider.current.insertAdjacentElement("afterbegin",sliderSectionFirst);
         refSlider.current.style.marginLeft="-100%" 
         },500)

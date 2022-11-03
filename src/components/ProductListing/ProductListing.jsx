@@ -17,9 +17,9 @@ export default function ProductListing() {
     useEffect(()=>{
         dispatch(getAllProductsApiMercadoLibre(name))
 
-        // return()=>{
-        //     dispatch(deletAll())
-        // }
+        return()=>{
+            dispatch(deletAll())
+        }
     },[name])
 
     if(msgError){
@@ -30,8 +30,7 @@ export default function ProductListing() {
     const goPathDetail = (idProduct,idUser,idCatalog)=>{
       // dispatch(getDetailProduct(idProduct))
       // setTimeout(()=>{
-        // navigate(`/allProducts/${name}/detailProducts/${idProduct}/${idUser}/${idCatalog}`)
-        alert("holaaa")
+        navigate(`/allProducts/${name}/detailProducts/${idProduct}/${idUser}/${idCatalog}`)
 
       // },2000)
     }
