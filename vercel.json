@@ -1,3 +1,5 @@
 {
-    "cleanUrls": true
-  }
+    "cleanUrls": true,
+    "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
+}
+
