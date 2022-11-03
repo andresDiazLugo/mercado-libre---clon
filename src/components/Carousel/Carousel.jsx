@@ -23,7 +23,7 @@ export default function Carousel() {
             setPosition(1)
         }
         setTimeout(()=>{
-        refSlider.current.style.transition ="none";
+        // refSlider.current.style.transition ="none";
         refSlider.current.insertAdjacentElement("beforeend",sliderSectionFirst);
         refSlider.current.style.marginLeft="-100%" 
         },500)
@@ -37,7 +37,7 @@ export default function Carousel() {
             setPosition(1)
         }
         setTimeout(()=>{
-        refSlider.current.style.transition ="none";
+        // refSlider.current.style.transition ="none";
         refSlider.current.insertAdjacentElement("afterbegin",sliderSectionFirst);
         refSlider.current.style.marginLeft="-100%" 
         },500)

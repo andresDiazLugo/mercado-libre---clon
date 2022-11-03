@@ -17,9 +17,9 @@ export default function ProductListing() {
     useEffect(()=>{
         dispatch(getAllProductsApiMercadoLibre(name))
 
-        return()=>{
-            dispatch(deletAll())
-        }
+        // return()=>{
+        //     dispatch(deletAll())
+        // }
     },[name])
 
     if(msgError){
