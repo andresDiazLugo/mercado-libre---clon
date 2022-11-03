@@ -1,4 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit'
+import { json } from 'react-router-dom'
 import {getApi} from '../../services/GET'
 
 const initialState={
@@ -84,7 +85,9 @@ export const {getAllProducts,msgError,detailProduct,review,question,description,
 
 export const getAllProductsApiMercadoLibre = (name)=>{
     return async dispatch =>{
-        const response = await getApi("https://api.mercadolibre.com/sites/MLA/search?q="+name)
+        // const response = await getApi("/sites/MLA/search?q="+name)
+        const response = await fetch("https://api.mercadolibre.com/sites/MLA/search?q="+name).then(data=>data.json())
+        console.log("este es el response",response)
         if(!response.results.length){
                dispatch(msgError(true))
         }else{
