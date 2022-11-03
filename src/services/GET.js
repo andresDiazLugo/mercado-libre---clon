@@ -1,8 +1,8 @@
 import axios from 'axios'
-const api = import.meta.env.VITE_APP_API_URL
+// const api = import.meta.env.VITE_APP_API_URL
 export const getApi = async(url)=>{
     try {
-        const response = await axios.get(api+url)
+        const response = await axios.get(url)
       
         return response.data
     
