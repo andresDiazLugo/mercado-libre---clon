@@ -20,19 +20,19 @@ export default function ProductListing() {
         return()=>{
             dispatch(deletAll())
         }
-    },[])
-    
+    },[name])
+
     if(msgError){
       return(
         <Mensajes/>
       )
     }
-    const goPathDetail = (e,idProduct,idUser,idCatalog)=>{
-//       e.preventDefault()
+    const goPathDetail = (idProduct,idUser,idCatalog)=>{
       // dispatch(getDetailProduct(idProduct))
       // setTimeout(()=>{
-//         navigate(`/allProducts/${name}/detailProducts/${idProduct}/${idUser}/${idCatalog}`)
-alert("holaaa")
+        // navigate(`/allProducts/${name}/detailProducts/${idProduct}/${idUser}/${idCatalog}`)
+        alert("holaaa")
+
       // },2000)
     }
     if(allProducts.length=== 0){
@@ -44,7 +44,7 @@ alert("holaaa")
    <div className={style.container}>
         <ul>
             {allProducts?.map(element=>{
-                       return <li key={element.id}  className={style.containerLi} onClick={(e)=>goPathDetail(e,element.id,element.idUser,element.catalogProduct)}>
+                       return <li key={element.id}  className={style.containerLi} onClick={()=>goPathDetail(element.id,element.idUser,element.catalogProduct)}>
                                     <img src={element.img}/>
                                     <div >
                                         <h4>{element.title}</h4>

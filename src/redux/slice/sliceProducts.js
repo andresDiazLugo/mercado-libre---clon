@@ -84,7 +84,7 @@ export const {getAllProducts,msgError,detailProduct,review,question,description,
 
 export const getAllProductsApiMercadoLibre = (name)=>{
     return async dispatch =>{
-        const response = await getApi("/sites/MLA/search?q="+name)
+        const response = await getApi("https://api.mercadolibre.com/sites/MLA/search?q="+name)
         if(!response.results.length){
                dispatch(msgError(true))
         }else{
