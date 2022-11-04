@@ -5,11 +5,13 @@ import {createQuestion} from '../../../../redux/slice/sliceProducts'
 import {FaQuestion} from 'react-icons/fa'
 
 export default function DetailQuestionAndResponse() {
+    const [allQuestion,setAllQuestion] = useState(5)
     const tiempoTranscurrido = Date.now();
     const hoy = new Date(tiempoTranscurrido).toISOString();//usalo cuando necesitas responser a la pregunta
     const dispatch = useDispatch()
     const inputValue = useRef()
-    const question = useSelector(state => state.products.question)
+    const questionArray = useSelector(state => state.products.question)
+    const question = questionArray.slice(0,allQuestion)
    const [questions,setQuestions] = useState({
     question:"",
     response:"",
@@ -51,6 +53,7 @@ export default function DetailQuestionAndResponse() {
                          </div>
                        </li>
             })}
+       { questionArray.length - question.length !==0 &&<li onClick={()=>setAllQuestion(questionArray.length)}><p className={style.results}>Ver {questionArray.length - question.length } resultado más</p></li> }
         </ul>}
     </div>
   )

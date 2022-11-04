@@ -13,7 +13,7 @@ export default function Inicio() {
         {/* <Header/> */}
         <Carousel/>
         <InfoPagos/>
-        <Ofertas/>
+        {/* <Ofertas/> */}
         <Anuncios/>
         <Descubri/>
         <Info/>

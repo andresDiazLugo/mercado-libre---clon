@@ -9,7 +9,7 @@
 .container .div::after{
     content: "";
     background-color: rgb(163, 162, 162);
-    width: 47rem;
+    width: 90%;
     height: 1px;
     position:absolute;
     top: 0;

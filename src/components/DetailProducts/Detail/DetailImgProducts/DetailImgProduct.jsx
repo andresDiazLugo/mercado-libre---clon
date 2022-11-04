@@ -1,10 +1,12 @@
 import {useState, useRef} from 'react';
 import style from './DetailImgProduct.module.css';
 import {useSelector} from 'react-redux'
-
+import {getMousePosition} from './getMousePosition' 
 export default function DetailImgProduct() {
    const productDetail = useSelector(state => state.products.productDetail)
-
+   const container = useRef()
+   const lens = useRef()
+   const image = useRef()
    let partionImgMain = productDetail.img
    let partionImgFinally 
    const [getImg, setImg] = useState(0)  
@@ -30,8 +32,9 @@ export default function DetailImgProduct() {
                                 <span className={style.containerleftoverImages}></span>
                             </div>}
             </div>
-            <div className={style.containerImg}>
-                <img className={style.imgMain} src={!getImg ? productDetail.imgMain : getImg } />
+            <div ref={container} onMouseMove={(e)=>getMousePosition(e,container,lens,image)} className={style.containerImg}>
+                <img ref={image} className={style.imgMain} src={!getImg ? productDetail.imgMain : getImg } />
+                <div ref={lens} className={style.lens}></div>
             </div>
         </div>    
   )

@@ -65,6 +65,9 @@ export default function CardComprar() {
                 <p>12 meses de grantía de fábrica</p>
             </div>
         </div>
+        <div className="portionImgProduct">
+
+        </div>
     </div>
   )
 }
