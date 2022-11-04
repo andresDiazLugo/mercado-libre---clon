@@ -7,10 +7,12 @@ import {useDispatch,useSelector} from 'react-redux'
 import CardMain from './CardInfoProduct/CardMain'
 import style from './DetailProduct.module.css'
 import Loading from '../Loading/Loading'
+import {changeTitleNameDom} from '../../services/TitlePageName'
 export default function DetailProduct() {
   const {id,idUser,idCatalog} = useParams()
   const productDetail = useSelector(state => state.products.productDetail)
   const dispatch = useDispatch()
+  changeTitleNameDom(productDetail.title)
   useEffect(()=>{
     dispatch(getDetailProduct(id))
     dispatch(getUser(idUser))

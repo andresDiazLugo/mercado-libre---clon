@@ -1,5 +1,4 @@
 import {createSlice} from '@reduxjs/toolkit'
-import { json } from 'react-router-dom'
 import {getApi} from '../../services/GET'
 
 const initialState={
@@ -63,12 +62,12 @@ const initialState={
                         response:!e.answer ? "" :e.answer.text,
                         date:!e.answer ? "" :e.answer.date_created,
                     }
-                })
+                }).filter(elements => elements.response !=="")
             },
             createQuestions:(state,action)=>{
                 state.question=[
-                    ...state.question,
                     action.payload,
+                    ...state.question,
                 ]
             },
             deletAll: (state)=>{
@@ -85,9 +84,9 @@ export const {getAllProducts,msgError,detailProduct,review,question,description,
 
 export const getAllProductsApiMercadoLibre = (name)=>{
     return async dispatch =>{
-        // const response = await getApi("/sites/MLA/search?q="+name)
-        const response = await fetch("https://api.mercadolibre.com/sites/MLA/search?q="+name).then(data=>data.json())
-        console.log("este es el response",response)
+        const response = await getApi("/sites/MLA/search?q="+name)
+        // const response = await fetch("https://api.mercadolibre.com/sites/MLA/search?q="+name).then(data=>data.json())
+        // console.log("este es el response",response)
         if(!response.results.length){
                dispatch(msgError(true))
         }else{
@@ -121,8 +120,10 @@ export const getCatalogDetailSpecificProduct = (idCatalog)=>{
 export const getReview = (id)=>{
     return async dispatch =>{
         const response = await getApi(`/reviews/item/${id}`)
-        dispatch(review(response))
+        // dispatch(review(response))
+        console.log("esta es la respuesta ",response)
     }
+
 }
 
 export const getQuestion = (id)=>{

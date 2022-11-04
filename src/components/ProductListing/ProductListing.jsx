@@ -1,25 +1,42 @@
-import {useEffect} from 'react'
+import {useEffect,useState} from 'react'
 import {useParams,useNavigate}from'react-router-dom'
-import {useSelector,useDispatch} from 'react-redux'
-import {getAllProductsApiMercadoLibre} from '../../redux/slice/sliceProducts'
+import {getApi} from '../../services/GET'
 import style from './ProductListing.module.css'
 import {convertARS}from './convertARS'
-import {getDetailProduct,deletAll} from '../../redux/slice/sliceProducts'
+import {changeTitleNameDom} from '../../services/TitlePageName'
 import Mensajes from '../Mensajes/Mensajes'
-import {deleteSymbolSlash} from '../../services/DeleteSymbolSlash'
 import Loading from '../Loading/Loading'
 export default function ProductListing() {
-    const dispatch = useDispatch();
-    const allProducts = useSelector(state=>state.products.allProducts)
-    const msgError = useSelector(state => state.products.msgError)
-    const {name} = useParams()
-    const navigate = useNavigate()
+    const [msgError, setMsgError] = useState(false);
+    const [allProducts, setProducts] = useState([]);
+    const {name} = useParams();
+    const navigate = useNavigate();
+    changeTitleNameDom(name)
     useEffect(()=>{
-        dispatch(getAllProductsApiMercadoLibre(name))
-
-        // return()=>{
-        //     dispatch(deletAll())
-        // }
+      (async function(){
+        let response = await getApi("/sites/MLA/search?q="+name)
+          if(!response.results.length){
+            setMsgError(true)
+          }else{
+            response = response.results.map(elements=>{
+              return{
+                id:elements.id,
+                title:elements.title,
+                price:convertARS(elements.price),
+                img:elements.thumbnail,
+                shipping:elements.shipping.free_shipping,
+                condition:elements.condition,
+                idUser:elements.seller.id,
+                catalogProduct:elements.catalog_product_id
+              }
+            })
+            setProducts(response)
+            setMsgError(false)
+          }
+        })()
+        return()=>{
+            setProducts([])
+        }
     },[name])
 
     if(msgError){
@@ -28,12 +45,7 @@ export default function ProductListing() {
       )
     }
     const goPathDetail = (idProduct,idUser,idCatalog)=>{
-      // dispatch(getDetailProduct(idProduct))
-      // setTimeout(()=>{
-        // navigate(`/allProducts/${name}/detailProducts/${idProduct}/${idUser}/${idCatalog}`)
-        alert("holaaa")
-
-      // },2000)
+        navigate(`/allProducts/${name}/detailProducts/${idProduct}/${idUser}/${idCatalog}`)
     }
     if(allProducts.length=== 0){
       return <div>
@@ -48,7 +60,7 @@ export default function ProductListing() {
                                     <img src={element.img}/>
                                     <div >
                                         <h4>{element.title}</h4>
-                                        <p className={style.price}>{"$ " + convertARS(element.price)}</p>
+                                        <p className={style.price}>{"$ " + element.price}</p>
                                         {element.shipping && <p className={style.envio}>Envío gratis</p>}
                                         <p className={style.condition}>{element.condition === "new" ? "Nuevo": "Usado"}</p>
                                     </div>
@@ -59,4 +71,4 @@ export default function ProductListing() {
      </div>
   )
 }
-// to={`/allProducts/${name}/detailProducts/${deleteSymbolSlash(e.title)}/${e.id}/${e.idUser}
+

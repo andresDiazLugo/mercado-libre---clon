@@ -3,6 +3,7 @@
     max-width:96rem;
     overflow: hidden;
     margin: auto;
+
 }
 .slider{
     height: 400px;
@@ -11,9 +12,7 @@
     margin-left: -100%;
     
 }
-.sliderSection{
-    background-color: red;
-}
+
 .sliderImg{
     display: block;
     width: 100%;
