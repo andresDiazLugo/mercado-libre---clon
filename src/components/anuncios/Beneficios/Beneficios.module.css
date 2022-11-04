@@ -78,22 +78,41 @@
     margin-top: 6rem;
     height: 15rem;
     display: flex;
+    background-color: red;
 }
-.container3 .ImgPortion{
+/* .container3 .ImgPortion{
     width: 50%;
     background-image: url("https://http2.mlstatic.com/D_NQ_844168-MLA51443063649_092022-OO.jpg");
     background-repeat: no-repeat;
     background-size: 130%;
     display: flex;
     align-items: center;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
+    /* border-top-left-radius: 6px; */
+    /* border-bottom-left-radius: 6px; */
+/* } * */
+.ImgPortion{
+    background-color: green;
+    width: 50%;
+    position: relative;
 }
-.ImgPortion img{
-    width: 6.8rem;
-    margin-left: 3rem;
-    border-radius: 5px;
+.imgPortion1{
+position: absolute;
+z-index: 10;
+width: 6rem;
+bottom: 3rem;
+margin-left: 2rem;
 }
+.imgPortion2{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+/* .imgPortion img{
+    width: 100%;
+} */
 .InfoPortion{
     background-color: #8533AF;
     width: 50%;
@@ -104,8 +123,13 @@
     line-height: 10%;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
-   
 }
+/* .ImgPortion img{
+    width: 6.8rem;
+    margin-left: 3rem;
+    border-radius: 5px;
+    object-fit: cover;
+} */
 
 .InfoPortion p{
     margin-left: 4rem;
