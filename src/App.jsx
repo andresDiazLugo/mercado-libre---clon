@@ -3,12 +3,14 @@ import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
 import ProductListing from "./components/ProductListing/ProductListing"
 import DetailProduct from "./components/DetailProducts/DetailProduct"
+import GaleryPhotos from "./components/GaleryPhotos/GaleryPhotos"
 import {Route,Routes} from "react-router-dom"
+import {useState} from 'react'
 function App() {
- 
-
+ const [renderGaleryPhotos, setRenderGaleryPhotos] = useState(false)
   return (
     <div style={{position:"relative"}}>
+    {renderGaleryPhotos && <GaleryPhotos setRenderGalery={setRenderGaleryPhotos}/>}
     <Header/>
       <Routes>
         <Route 
@@ -21,7 +23,7 @@ function App() {
         />
         <Route
           path="/allProducts/:name/detailProducts/:id/:idUser/:idCatalog"
-          element={<DetailProduct/>}
+          element={<DetailProduct setRenderGalery={setRenderGaleryPhotos}/>}
         />
 
       </Routes>

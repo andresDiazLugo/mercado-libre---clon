@@ -1,0 +1,106 @@
+.title{
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: 2.5rem;
+}
+.containerElements{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    justify-content: space-between;
+}
+.subContainer1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subContainer1 .subContainerStar{
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    justify-content: center;
+}
+.subContainer1 .progress{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+.subContainer1 .progress div progress{
+    width: 12rem;
+    height: 0.6rem;
+}
+.subContainer1 .progress div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.subContainer1 .progress div p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #0000008C;
+    text-align: center;
+}
+.subContainer1 p{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #3483fa;
+    margin:0;
+    align-items: center;
+}
+.subContainer1 div{
+    margin: auto 0;
+}
+.subContainer1 div .calificaciones{
+    font-size: 10px;
+}
+.subsubContainer{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    gap: 1rem;
+}
+.subsubContainer button{
+    height: 2.4rem;
+    width: 10rem;
+    border: none;
+    border-radius: 10rem ;
+    text-align: center;
+    color: #3483fa;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: rgba(65,137,230,.2);;
+}
+.subsubContainerUl li {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(179, 173, 173);
+    list-style: none;
+    width:100%;
+    margin-left:-3.5rem;
+}
+.subsubContainerUl li .subsubsubContainerDiv1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.subsubContainerUl li .subsubsubContainerDiv1{
+    font-size: 12px;
+    color:rgba(0,0,0,.55) ;
+}
+.subsubContainerUl li .subsubsubContainerDiv2{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+}
+.subsubContainerUl li .subsubsubContainerDiv2 button{
+    border: 1px solid rgb(150, 144, 144);
+    border-radius: 20rem;
+    background-color: white;
+    height: 2rem;
+    font-size: 12px;
+    color: rgba(0,0,0,.55); 
+    display: flex;
+    align-items: center;
+}
