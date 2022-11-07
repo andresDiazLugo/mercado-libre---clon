@@ -9,7 +9,7 @@
 }
 .img1{
     animation-name:image;
-    animation-duration: 0.4s;
+    animation-duration: 1s;
     position: relative;
     animation-direction: reverse;
     animation-timing-function: ease;
@@ -17,7 +17,7 @@
 }
 .img2{
     animation-name:image2;
-    animation-duration: 0.4s;
+    animation-duration: 1s;
     position: relative;
     animation-direction: reverse;
     animation-timing-function: ease;

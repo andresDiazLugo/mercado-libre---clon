@@ -5,6 +5,7 @@
     min-height: 100vh;
     width:55rem;
     margin:auto;
+    margin-bottom: 9rem;
 }
 .container ul{
     display: flex;

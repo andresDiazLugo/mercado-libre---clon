@@ -1,0 +1,66 @@
+.container{
+    background-color: rgb(20 20 20 /90%);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 20;
+}
+
+.subcontainer1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+    width: 100%;
+
+}
+.subcontainer1 div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    background-color: rgb(29, 28, 28);
+
+    width: 3rem;
+    height: 1.6rem;
+    font-size: 14px;
+    margin-left: 2rem;
+    border-radius:10rem ;
+    border: none;
+
+}
+.subcontainer1 button{
+    background-color: rgb(29, 28, 28);
+    color: aliceblue;
+    margin-right: 2rem;
+    font-size: 1.7rem;
+    border: none;
+    cursor: pointer;
+}
+.subcontainer2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4rem;
+    width: 100%;
+    height: 31rem;
+}
+.subcontainer2 button{
+    font-size: 2.5rem;
+    font-weight: 500;
+    width: 3.5rem;
+    height: 3.6rem;
+    background-color: rgb(29, 28, 28);
+    color: aliceblue;
+    text-align: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    border: none;
+    cursor: pointer;
+}
+.container img{
+    width: 20%;
+    object-fit: cover;
+}
+
+

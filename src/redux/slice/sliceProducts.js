@@ -70,17 +70,33 @@ const initialState={
                     ...state.question,
                 ]
             },
-            deletAll: (state)=>{
-                state.allProducts= [],
+            deletDetailProduct: (state)=>{
                 state.productDetail={},
                 state.question=[],
                 state.review={}
+            },
+            likes: (state,action)=>{
+                
+                alert("entrando")
+                state.review= {
+                    ...state.review,
+                    reviews: reviews.map(e=>{
+                        if(action.payload === e.id){
+                            return {
+                                ...e,
+                                likes: "sssssss"
+                            }
+                    }else{
+                                e
+                    }
+                    })
+                }
             }
         }
     }
 )
 
-export const {getAllProducts,msgError,detailProduct,review,question,description,listProperty,createQuestions,deletAll} = productSlice.actions
+export const {getAllProducts,msgError,detailProduct,review,question,description,listProperty,createQuestions,deletDetailProduct,likes} = productSlice.actions
 
 export const getAllProductsApiMercadoLibre = (name)=>{
     return async dispatch =>{
@@ -120,8 +136,7 @@ export const getCatalogDetailSpecificProduct = (idCatalog)=>{
 export const getReview = (id)=>{
     return async dispatch =>{
         const response = await getApi(`/reviews/item/${id}`)
-        // dispatch(review(response))
-        console.log("esta es la respuesta ",response)
+        dispatch(review(response))
     }
 
 }
@@ -137,6 +152,11 @@ export const getQuestion = (id)=>{
 export const createQuestion = (question)=>{
     return dispatch =>{
             dispatch(createQuestions(question))
+    }
+}
+export const addLikes = (id)=>{
+    return dispatch =>{
+        dispatch(likes(id))
     }
 }
 
