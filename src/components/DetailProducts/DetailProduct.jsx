@@ -12,6 +12,7 @@ import {deletDetailProduct} from '../../redux/slice/sliceProducts'
 
 export default function DetailProduct({setRenderGalery}) {
   const {id,idUser,idCatalog} = useParams()
+ 
   const productDetail = useSelector(state => state.products.productDetail)
   const dispatch = useDispatch()
   changeTitleNameDom(productDetail.title)

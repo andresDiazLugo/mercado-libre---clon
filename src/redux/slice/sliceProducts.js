@@ -136,6 +136,7 @@ export const getCatalogDetailSpecificProduct = (idCatalog)=>{
 export const getReview = (id)=>{
     return async dispatch =>{
         const response = await getApi(`/reviews/item/${id}`)
+    
         dispatch(review(response))
     }
 
@@ -145,6 +146,7 @@ export const getQuestion = (id)=>{
     return async dispatch =>{
         
         const {questions} = await getApi(`/questions/search?item=${id}`)
+    
         dispatch(question(questions))
     }
 }
