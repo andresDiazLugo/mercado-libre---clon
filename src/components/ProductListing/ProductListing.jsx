@@ -15,6 +15,7 @@ export default function ProductListing() {
     useEffect(()=>{
       (async function(){
         let response = await getApi("/sites/MLA/search?q="+name)
+        console.log(response)
           if(!response.results.length){
             setMsgError(true)
           }else{
